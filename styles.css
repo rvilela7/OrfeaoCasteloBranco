@@ -1,0 +1,210 @@
+/* Estilos globais */
+body {
+    font-family: math, serif, arial;
+    margin: 1px 0 0 0;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+    height: 100%;
+}
+
+header {
+    background-color: #8B0000; /* Vermelho escuro */
+    border-radius: 5px;
+    color: whitesmoke;
+    padding: 1px;
+    margin-bottom: 2px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+}
+
+.logo {
+    height: 112px;
+    width: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    margin-right: 5px;
+    font-size: 2em;
+    color: white;
+    /* white-space: nowrap; */
+}
+
+nav {
+    border: gold solid 2px;
+    background-color: black;
+    font-family: Helvetica, Arial;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px 0;
+    position: relative;
+    z-index: 9;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha */
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    padding: 5px 20px;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: whitesmoke;
+    transform: scale(1.2);
+}
+
+section {
+    padding: 20px;
+    background-color: #8B0000;
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 
+{
+    color: gold;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px); /* Ajuste para cabeçalho e rodapé */
+    overflow: hidden;
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    background-color: black;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: black;
+    color: gold;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #8B0000;
+    color: white;
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .header-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;
+    }
+
+    nav {
+        margin: 10px auto; /* Centraliza o menu */
+        width: 80%; /* Ajusta a largura do menu */
+    }
+
+    .carousel {
+        height: calc(80vh - 120px); /* Reduz a altura do carousel */
+    }
+
+    .slides img {
+        height: 400px; /* Ajusta a altura das imagens */
+    }
+}
+
